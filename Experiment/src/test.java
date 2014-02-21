@@ -18,8 +18,9 @@ class BubbleSort {
 
 		try {
 			start(array1, array2, array3, array4);
-		} catch (IOException e) {}
-												// same values
+		} catch (IOException e) {
+		}
+		// same values
 
 		long startTime = System.nanoTime();
 		BubbleSort(array1);
@@ -38,23 +39,22 @@ class BubbleSort {
 			int[] array4) throws IOException {
 		// read from file
 		BufferedReader inputStream = null;
-        PrintWriter outputStream = null;
+		PrintWriter outputStream = null;
 
-        try {
-            inputStream = new BufferedReader(new FileReader("rand.txt"));
-        } finally {
-            if (inputStream == null) {
-            	System.out.println("Not Found");
-            }
-        }
-		
+		try {
+			inputStream = new BufferedReader(new FileReader("rand.txt"));
+		} finally {
+			if (inputStream == null) {
+				System.out.println("Not Found");
+			}
+		}
 
 		int num = 0;
 		String line = null;
 		for (int i = 0; i < size; i++) {
 			line = inputStream.readLine();
 			num = Integer.parseInt(line);
-			//System.out.println(num);
+			// System.out.println(num);
 			array1[i] = num;
 			array2[i] = num;
 			array3[i] = num;
@@ -76,9 +76,7 @@ class BubbleSort {
 				}
 			}
 		}
-		/*for (int i = 0; i < size; i ++) {
-			System.out.println(array[i]);
-		}*/
+		// printArray(array);
 	}
 
 	public static void BubbleSortExit(int[] array) {
@@ -95,8 +93,23 @@ class BubbleSort {
 				}
 			}
 		}
-		/*for (int i = 0; i < size; i ++) {
+		// printArray(array);
+	}
+
+	public static void SelectionSort(int[] array) {
+		
+		// printArray(array);
+	}
+	
+	public static void InsertionSort(int[] array) {
+		
+		// printArray(array);
+	}
+	
+	
+	public static void printArray(int[] array) {
+		for (int i = 0; i < size; i++) {
 			System.out.println(array[i]);
-		}*/
+		}
 	}
 }
